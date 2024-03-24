@@ -25,6 +25,7 @@ Epicycloid Animation Script (Epicykloida.py): This script is designed to create 
 LAB 2
 
 Convex Hull Visualization with Rotated Tigers
+
 This Python script visualizes a convex hull of a set of random points using the Graham scan algorithm. Each point is represented with a rotated image of a tiger, and the convex hull is drawn to enclose the points.
 
 Features
@@ -53,5 +54,49 @@ After running the script, you should see a plot titled 'Convex Hull around Rando
 
 ![Zrzut ekranu 2024-03-11 202750](https://github.com/kacdro/Wspolczesne-Narzedzia-Obliczeniowe-Laboratorium/assets/100469610/8137047c-064e-4f81-8de7-fccd4f0e7c37)
 
+LAB 3
+
+Kirsch Edge Detection
+
+The Kirsch edge detection script applies the Kirsch operator to an image for identifying edges in all eight possible orientations. This script is especially useful for highlighting the structural details in images by detecting sharp intensity changes.
+
+Dependencies
+OpenCV: For image processing tasks.
+NumPy: For handling array operations.
+
+![kirsch_edges](https://github.com/kacdro/Wspolczesne-Narzedzia-Obliczeniowe-Laboratorium/assets/100469610/b8a5bcb3-37b7-4cf2-92ff-fc1016052ea7)
+
+How It Works
+
+- The script loads the provided image in grayscale mode.
+- It applies a median blur to reduce noise in the image.
+- Eight Kirsch kernels are defined, corresponding to the eight possible edge orientations.
+- Each kernel is convolved with the image to detect edges in a specific orientation.
+- The absolute values of the gradients from each convolution are computed.
+- The gradients are combined to form a single edge image.
+- The combined edge image is normalized and converted to an 8-bit format.
+- The resulting image is saved to a file named 'kirsch_edges.png'.
+
+Output
+
+The output is an image that highlights the edges detected by the Kirsch operator. This can be used to analyze the structure and features in the image.
+
+Custom Canny Edge Detection
+
+This script implements a custom version of the Canny edge detection algorithm using OpenCV and NumPy. It demonstrates how to manually apply Gaussian blur, compute gradient magnitudes and directions, perform non-maximum suppression, and finally, track edges by hysteresis.
+
+Dependencies
+
+OpenCV (cv2): For basic image processing functions.
+NumPy: For efficient array operations.
+
+How It Works
+
+- Gaussian Blur: Initially, the input image is smoothed using a Gaussian filter to reduce noise and detail.
+- Gradient Computation: The script computes the gradient magnitude and direction using custom convolution operations with Sobel kernels.
+- Non-Maximum Suppression: It thins edges to 1-pixel wide lines by suppressing non-maximal gradient magnitudes across the gradient direction.
+- Edge Tracking by Hysteresis: Finally, it defines strong and weak edges based on high and low threshold values and tracks edges by hysteresis to determine which edges are truly edge pixels.
+
+![custom_canny_edges](https://github.com/kacdro/Wspolczesne-Narzedzia-Obliczeniowe-Laboratorium/assets/100469610/617952c4-c289-41ab-a519-4f4b1269abac)
 
 
