@@ -24,7 +24,34 @@ Epicycloid Animation Script (Epicykloida.py): This script is designed to create 
 
 LAB 2
 
+Convex Hull Visualization with Rotated Tigers
+This Python script visualizes a convex hull of a set of random points using the Graham scan algorithm. Each point is represented with a rotated image of a tiger, and the convex hull is drawn to enclose the points.
 
+Features
+- Generation of a random set of points.
+- Application of the Graham scan algorithm to identify the convex hull.
+- Visualization of each point with a uniquely rotated tiger image.
+- Plotting the convex hull with a closed loop around the points.
+
+Requirements
+
+- NumPy: For numerical computations and handling arrays.
+- Matplotlib: For creating the plot and visualizing the convex hull.
+
+![tiger](https://github.com/kacdro/Wspolczesne-Narzedzia-Obliczeniowe-Laboratorium/assets/100469610/26bd5f71-1946-46ef-a55b-00bd1f92b08a)
+
+Customization
+You can adjust the following in the script to customize the visualization:
+
+- Change num_points to vary the number of points.
+- Modify the rotate_image function to handle different image rotation methods.
+- Replace the tiger image with any image of your choice.
+
+Visual Output
+
+After running the script, you should see a plot titled 'Convex Hull around Randomly Generated Tigers' with each point having a unique tiger image rotated at a random angle. The points are connected by lines representing the convex hull.
+
+![Zrzut ekranu 2024-03-11 202750](https://github.com/kacdro/Wspolczesne-Narzedzia-Obliczeniowe-Laboratorium/assets/100469610/8137047c-064e-4f81-8de7-fccd4f0e7c37)
 
 
 
